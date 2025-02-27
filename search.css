@@ -1,0 +1,49 @@
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto; 
+    gap: 15px;
+}
+
+.sr_img {
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    
+    text-align: center; 
+}
+
+.sr_img img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+.search_content{
+    margin-top: 3%;
+}
+
+.search_content1{
+    margin-left: 22%;
+}
+/*//////////////////////////////*/
+
+@media (max-width: 768px) {
+    #searchResults {
+        width: 90%;
+    }
+
+    .sr_img {
+        width: 100%; 
+    }
+
+    .search_content {
+        margin-top: 15%;
+    }
+
+    .search_content1 {
+        margin-left: 0;
+        text-align: center;
+    }
+}

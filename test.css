@@ -1,0 +1,344 @@
+.header{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    padding: 10px 20px; 
+}
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+body {
+    padding-top: 70px; 
+}
+.logo{
+    width: 15%;
+}
+
+.logo img{
+    width: 60%;
+    float: right;
+}
+
+.danhsach{
+    width: 65%;
+    color: black;
+    display: flex;
+    gap: 50px;
+    padding: 2%;
+}
+a {
+    text-decoration: none;
+    color: #000000; 
+}
+.search {
+    position: relative;
+    width: 25%;
+    margin: 20px auto;
+}
+
+.search input {
+    width: 70%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+}
+
+.search input:focus {
+    border-color: #5325d4;
+}
+
+.search input:focus + i {
+    color: #5325d4;
+}
+
+/* slide*/
+.slider {
+    position: relative;
+    width: 100%; 
+    height: 600px;
+    overflow: hidden;
+}
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slider img.active {
+    opacity: 1;
+}
+
+/*content*/
+.content1 {
+    width: 70%;
+    margin: 0 auto; 
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content1_img {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 15px; 
+}
+
+.ac {
+    width: calc(33.333% - 10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ac img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.ac:hover {
+    transform: scale(1.05);
+}
+
+
+/*video*/
+.vd {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vd h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.vd div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.vd video {
+    width: calc(33.333% - 20px);
+    max-width: 300px;
+    height: 180px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.vd video:hover {
+    transform: scale(1.05); 
+}
+
+
+/*footer*/
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #333;
+    color: white;
+    padding: 30px 5%;
+    font-family: Arial, sans-serif;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-align: center;
+}
+
+.footer hr {
+    width: 50px;
+    border: 1px solid #ffcc00;
+    margin-bottom: 15px;
+}
+
+.ft_tt, .fb, .d_ft {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.ft_logo {
+    text-align: center;
+}
+
+.ft_logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.ft_logo p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.fb {
+    text-align: center;
+}
+
+.map {
+    text-align: center;
+}
+
+.map img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+
+/*//////////////////////////////////////*/
+@media (max-width: 768px) {
+    .content1 {
+        width: 90%;
+    }
+    .search {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .danhsach {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .danhsach a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .danhsach.active {
+        display: flex;
+    }
+
+    .logo {
+        width: 42%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    /* SEARCH */
+    .search {
+        margin-right: 5%;
+      
+    }
+
+    .search input {
+        width: 70%;
+        margin-top: 10%;
+        padding:10px
+        
+    }
+
+    /* SLIDER */
+    .slider {
+        height: 300px;
+    }
+
+    .slider img {
+        height: 300px;
+    }
+
+    /* CONTENT */
+    .content1_img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ac {
+        width: 90%;
+    }
+
+    /* VIDEO */
+    .vd div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vd video {
+        width: 90%;
+        height: auto;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ft_tt, .fb, .d_ft {
+        min-width: 100%;
+    }
+
+    .ft_logo img {
+        width: 120px;
+    }
+
+    .map img {
+        max-width: 100%;
+    }
+}
